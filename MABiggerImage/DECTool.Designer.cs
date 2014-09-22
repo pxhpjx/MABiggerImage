@@ -41,9 +41,11 @@
             this.btnSelectTarget = new System.Windows.Forms.Button();
             this.tcAll = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSelectSourceFile = new System.Windows.Forms.Button();
             this.chkSlow = new System.Windows.Forms.CheckBox();
             this.chkTW = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.chkFast = new System.Windows.Forms.CheckBox();
             this.btnNormalMove = new System.Windows.Forms.Button();
             this.btnSelectPath = new System.Windows.Forms.Button();
             this.btnNormalDEC = new System.Windows.Forms.Button();
@@ -51,7 +53,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pbAll = new System.Windows.Forms.ProgressBar();
             this.btnBreak = new System.Windows.Forms.Button();
-            this.chkFast = new System.Windows.Forms.CheckBox();
             this.tcAll.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -130,9 +131,9 @@
             // 
             // btnSelectSource
             // 
-            this.btnSelectSource.Location = new System.Drawing.Point(453, 10);
+            this.btnSelectSource.Location = new System.Drawing.Point(453, 0);
             this.btnSelectSource.Name = "btnSelectSource";
-            this.btnSelectSource.Size = new System.Drawing.Size(65, 23);
+            this.btnSelectSource.Size = new System.Drawing.Size(65, 21);
             this.btnSelectSource.TabIndex = 8;
             this.btnSelectSource.Text = "选择路径";
             this.btnSelectSource.UseVisualStyleBackColor = true;
@@ -160,6 +161,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnSelectSourceFile);
             this.tabPage1.Controls.Add(this.chkSlow);
             this.tabPage1.Controls.Add(this.chkTW);
             this.tabPage1.Controls.Add(this.label1);
@@ -178,6 +180,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "卡牌大图获取解密";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnSelectSourceFile
+            // 
+            this.btnSelectSourceFile.Location = new System.Drawing.Point(453, 20);
+            this.btnSelectSourceFile.Name = "btnSelectSourceFile";
+            this.btnSelectSourceFile.Size = new System.Drawing.Size(65, 21);
+            this.btnSelectSourceFile.TabIndex = 12;
+            this.btnSelectSourceFile.Text = "选择文件";
+            this.btnSelectSourceFile.UseVisualStyleBackColor = true;
+            this.btnSelectSourceFile.Click += new System.EventHandler(this.btnSelectSourceFile_Click);
             // 
             // chkSlow
             // 
@@ -214,6 +226,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "普通解密";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // chkFast
+            // 
+            this.chkFast.AutoSize = true;
+            this.chkFast.Location = new System.Drawing.Point(25, 62);
+            this.chkFast.Name = "chkFast";
+            this.chkFast.Size = new System.Drawing.Size(48, 16);
+            this.chkFast.TabIndex = 5;
+            this.chkFast.Text = "快速";
+            this.chkFast.UseVisualStyleBackColor = true;
             // 
             // btnNormalMove
             // 
@@ -278,16 +300,6 @@
             this.btnBreak.UseVisualStyleBackColor = true;
             this.btnBreak.Click += new System.EventHandler(this.btnBreak_Click);
             // 
-            // chkFast
-            // 
-            this.chkFast.AutoSize = true;
-            this.chkFast.Location = new System.Drawing.Point(25, 62);
-            this.chkFast.Name = "chkFast";
-            this.chkFast.Size = new System.Drawing.Size(48, 16);
-            this.chkFast.TabIndex = 5;
-            this.chkFast.Text = "快速";
-            this.chkFast.UseVisualStyleBackColor = true;
-            // 
             // DECTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -337,6 +349,7 @@
         private System.Windows.Forms.Button btnBreak;
         private System.Windows.Forms.CheckBox chkSlow;
         private System.Windows.Forms.CheckBox chkFast;
+        private System.Windows.Forms.Button btnSelectSourceFile;
     }
 }
 

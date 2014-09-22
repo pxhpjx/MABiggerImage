@@ -302,6 +302,13 @@ namespace MABiggerImage
             }
         }
 
+        private void btnSelectSourceFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+                txtSource.Text = dialog.FileName;
+        }
+
         private void btnSelectTarget_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
@@ -423,5 +430,6 @@ namespace MABiggerImage
                 DECTimer.Stop();
             AllEnable();
         }
+
     }
 }
